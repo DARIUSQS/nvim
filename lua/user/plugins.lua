@@ -16,6 +16,8 @@ use {
 use 'nvim-tree/nvim-tree.lua'
 use {'cdelledonne/vim-cmake'}
 use { 'tpope/vim-surround'}
+use {'ful1e5/onedark.nvim'}
+
 
 use { "ellisonleao/gruvbox.nvim" }
 
