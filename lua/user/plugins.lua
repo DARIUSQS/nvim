@@ -18,6 +18,7 @@ use {'cdelledonne/vim-cmake'}
 use { 'tpope/vim-surround'}
 use {'ful1e5/onedark.nvim'}
 
+use {'tpope/vim-commentary'};
 
 use { "ellisonleao/gruvbox.nvim" }
 
