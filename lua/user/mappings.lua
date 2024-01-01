@@ -6,4 +6,5 @@ vim.keymap.set("n", "<C-k>", function() require("harpoon.ui").nav_next() end)
 vim.keymap.set("n", "<C-j>", function() require("harpoon.ui").nav_prev() end)
 vim.keymap.set("n", "<C-l>", function() require("harpoon.ui").nav_file(1) end)
 vim.keymap.set("n", "<C-p>", "<C-^>")
+vim.keymap.set("n", "<C-s>", ":!pdflatex <C-r>=expand('%:r')<cr>.tex <CR><CR>  :!rm <C-r>=expand('%:r')<cr>.aux <C-r>=expand('%:r')<cr>.log <C-r>=expand('%:r')<cr>.out &<CR><CR>")
 
