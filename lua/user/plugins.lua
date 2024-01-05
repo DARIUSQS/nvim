@@ -1,5 +1,5 @@
 vim.cmd [[packadd packer.nvim]]
-                                                                                                       
+
 return require('packer').startup(function(use)
 use 'wbthomason/packer.nvim'
 	
@@ -16,6 +16,8 @@ use {
 use 'nvim-tree/nvim-tree.lua'
 use { 'tpope/vim-surround'}
 use {'ful1e5/onedark.nvim'}
+
+use 'lervag/vimtex'
 
 use {'tpope/vim-commentary'};
 
