@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "texlab"}
+    ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "texlab", "cmake"}
 }
 
 local on_attach = function(_, _)
@@ -19,6 +19,12 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("lspconfig").lua_ls.setup {
     capabilities = capabilities,
     on_attach = on_attach
+}
+
+require("lspconfig").cmake.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    require("lsp_signature").on_attach(on_attach)
 }
 
 require("lspconfig").texlab.setup {

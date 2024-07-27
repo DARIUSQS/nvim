@@ -19,6 +19,15 @@ use {'ful1e5/onedark.nvim'}
 
 use 'lervag/vimtex'
 
+require("packer").startup(function()
+  use({
+    "stevearc/oil.nvim",
+    config = function()
+      require("oil").setup()
+    end,
+  })
+end)
+
 use {'tpope/vim-commentary'};
 
 use 'ThePrimeagen/harpoon'
