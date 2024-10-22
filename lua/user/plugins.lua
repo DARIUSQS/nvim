@@ -1,8 +1,17 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+require("packer").startup(function()
+  use({
+    "stevearc/oil.nvim",
+    config = function()
+      require("oil").setup()
+    end,
+  })
+end)
+
 use 'wbthomason/packer.nvim'
-	
+
 use {
   'nvim-telescope/telescope.nvim', tag = '0.1.4',
   requires = { {'nvim-lua/plenary.nvim'} }
@@ -17,16 +26,6 @@ use 'nvim-tree/nvim-tree.lua'
 use { 'tpope/vim-surround'}
 use {'ful1e5/onedark.nvim'}
 
-use 'lervag/vimtex'
-
-require("packer").startup(function()
-  use({
-    "stevearc/oil.nvim",
-    config = function()
-      require("oil").setup()
-    end,
-  })
-end)
 
 use {'tpope/vim-commentary'};
 
@@ -42,17 +41,25 @@ end}
 
 use 'hrsh7th/nvim-cmp'
 use 'hrsh7th/cmp-nvim-lsp'
-use({
+
+use{
 	"L3MON4D3/LuaSnip",
 	tag = "v2.*",	
     run = "make install_jsregexp"
-})
+}
+
 use {
   "ray-x/lsp_signature.nvim",
 }
+
+use { "williamboman/mason.nvim" }
+
 use {
-    "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
 }
+
+use 'lervag/vimtex'
+
+
 end)
