@@ -1,3 +1,4 @@
+require "cpp_compiler"
 require "user.plugins"
 require "user.vimtex"
 require "user.telescope"
